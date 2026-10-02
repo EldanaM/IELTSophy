@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hero">
+    <h1>Your Profile</h1>
+    <p>Track your progress and improve every day</p>
+</div>
+
+<div class="card" style="margin-bottom: 30px;">
+    <h2> Test History</h2>
+    <div id="history-list">
+        <p style="opacity:0.6; text-align:center;">Loading...</p>
+    </div>
+    <button onclick="window.location.href='/tests/'">Start Training</button>
+</div>
+
+<div class="dashboard">
+    <div class="dash-card">
+        <h3> Progress</h3>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+        </div>
+        <p class="dash-text"><span id="progress-text">0</span> tests completed</p>
+    </div>
+    <div class="dash-card">
+        <h3> Streak</h3>
+        <div class="streak-value" id="streak-value">0</div>
+        <p class="dash-text">days in a row</p>
+    </div>
+    <div class="dash-card">
+        <h3> IELTS Forecast</h3>
+        <div class="forecast-value" id="forecast-value">-</div>
+        <p class="dash-text">based on your tests</p>
+    </div>
+    <div class="dash-card">
+        <h3> Level</h3>
+        <div class="level-value" id="level-value">B1</div>
+        <p class="dash-text">keep going up!</p>
+    </div>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-value" id="stat-tests">0</div>
+        <div class="stat-label">Tests completed</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value" id="stat-level">B1</div>
+        <div class="stat-label">Current level</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value" id="stat-percent">0%</div>
+        <div class="stat-label">Average score</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value" id="stat-streak">0</div>
+        <div class="stat-label">Best streak</div>
+    </div>
+</div>
+
+<div class="card" style="margin-top: 30px;">
+    <h2> Weak Areas</h2>
+    <div class="weak-list" id="weak-list">
+        <p style="opacity:0.6;">Loading...</p>
+    </div>
+</div>
+
+<div class="achievements" style="margin-top: 40px;">
+    <h2> Achievements</h2>
+    <div class="ach-grid" id="ach-grid">
+        <div class="ach-card locked"><div class="ach-icon">🎯</div><p>First Test</p></div>
+        <div class="ach-card locked"><div class="ach-icon">🔥</div><p>3-Day Streak</p></div>
+        <div class="ach-card locked"><div class="ach-icon">💯</div><p>Perfect Score</p></div>
+        <div class="ach-card locked"><div class="ach-icon">📚</div><p>5 Tests Done</p></div>
+    </div>
+</div>
+{% endblock %}

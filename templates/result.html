@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>Result</h2>
+
+    <div class="result-row">
+        <span>Correct:</span>
+        <b id="correct">0</b>
+    </div>
+    <div class="result-row">
+        <span>Incorrect:</span>
+        <b id="wrong">0</b>
+    </div>
+    <div class="result-row">
+        <span>Percent:</span>
+        <b id="percent">0%</b>
+    </div>
+
+    <h3>Mistakes:</h3>
+    <ul id="mistakes"></ul>
+
+    <button onclick="window.location.href='/'">Home</button>
+</div>
+{% endblock %}

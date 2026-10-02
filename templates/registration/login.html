@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="card">
+    <h2>Login</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    <p style="text-align:center; margin-top:15px;">
+        <a href="/accounts/password_reset/">Forgot password?</a>
+    </p>
+    <p style="text-align:center;">
+        No account? <a href="/register/">Register</a>
+    </p>
+
+    <hr style="margin: 20px 0; opacity: 0.3;">
+
+    <a href="/accounts/google/login/" style="text-decoration:none;">
+        <button style="background: white; color: #333; border: 1px solid #ddd;">
+            Sign in with Google
+        </button>
+    </a>
+</div>
+{% endblock %}

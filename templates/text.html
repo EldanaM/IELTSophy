@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% csrf_token %}
+
+<div class="exam-header">
+    <div class="exam-info">
+        <span id="timer" class="timer">15:00</span>
+    </div>
+    <span class="exam-label">IELTS Reading Practice</span>
+</div>
+
+<div class="exam-container">
+    <div class="exam-text">
+        <h2 id="text-title">Loading...</h2>
+        <div class="text-meta">
+            <span class="badge" id="text-level"></span>
+            <span class="badge" id="text-topic"></span>
+        </div>
+        <hr>
+        <p id="text-content"></p>
+    </div>
+
+    <div class="exam-questions">
+        <h3>Questions</h3>
+        <div id="questions"></div>
+        <button onclick="submitAnswers()" class="submit-btn">Finish Test</button>
+    </div>
+</div>
+{% endblock %}

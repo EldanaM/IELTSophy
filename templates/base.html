@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTSophy</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>IELTSophy</h2>
+            <p class="tagline">Your level. Your pace.</p>
+        </div>
+
+        <nav>
+            <a href="/" class="nav-item"> Home</a>
+            <a href="/tests/" class="nav-item"> Tests</a>
+            <a href="/vocabulary/" class="nav-item"> Vocabulary</a>
+            <a href="/profile/" class="nav-item"> Profile</a>
+            {% if user.is_authenticated %}
+    <form method="post" action="/accounts/logout/" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" class="nav-item" style="background:none; border:none; color:white; cursor:pointer; font-family:inherit; font-size:14px; padding:10px 12px; text-align:center; width:100%;">
+            Logout
+        </button>
+    </form>
+{% else %}
+    <a href="/accounts/login/" class="nav-item"> Login</a>
+    <a href="/register/" class="nav-item"> Register</a>
+{% endif %}
+        </nav>
+
+        <button id="theme-toggle" class="theme-btn" onclick="toggleTheme()">🌙</button>
+    </aside>
+
+    <div class="content">
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hero">
+    <h1> My Vocabulary</h1>
+    <p>Save words from texts and learn them every day</p>
+</div>
+
+<div class="vocab-form">
+    <div class="vocab-input-group">
+        <input type="text" id="word" placeholder="Word (e.g. phenomenon)">
+        <input type="text" id="translation" placeholder="Translation (e.g. явление)">
+    </div>
+    <input type="text" id="context" placeholder="Context (optional)">
+    <button onclick="addWord()">Add Word</button>
+</div>
+
+<div class="vocab-stats">
+    <div class="vocab-stat">
+        <div class="vocab-stat-value" id="vocab-count">0</div>
+        <div class="vocab-stat-label">Words saved</div>
+    </div>
+</div>
+
+<div class="vocab-list" id="word-list">
+    <p class="vocab-empty">No words yet. Add your first word above!</p>
+</div>
+{% endblock %}

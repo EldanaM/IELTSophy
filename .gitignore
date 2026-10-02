@@ -1,0 +1,43 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ===== Виртуальное окружение =====
+venv/
+env/
+.venv/
+
+# ===== Django =====
+*.log
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+
+# ===== Секреты =====
+.env
+*.env
+
+# ===== VS Code =====
+.vscode/
+*.code-workspace
+
+# ===== PyCharm =====
+.idea/
+*.iml
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== Прочее =====
+*.bak
+*.tmp
+*.swp
